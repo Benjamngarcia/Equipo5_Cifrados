@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
+
+* {
+    font-family: 'Urbanist', sans-serif; 
+}
+body{
+    background-color: #80cee1;
+}
+h1{
+    text-align: center;
+}
+.contenedor-chido{
+    display: flex;
+    margin: auto;
+    height: 80vh;
+    width: 80%;;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.contenedor{
+    width: 60%;
+    margin: auto;
+    height: 60%;
+    box-shadow: 1px 1px 11px 0 rgba(0, 0, 0, 0.404);
+    box-sizing: border-box;
+    padding: 50px;
+    border-radius: 7px;
+}
+input[type=text] {
+    width: 100%;
+    border: none;
+    margin: 0;
+    height: 40px;
+    background: #515151;
+    color: white;
+    outline: none;
+}
+#mensaje{
+    border-radius: 10px 10px 0 0;
+}
+#mensaje2{
+    border-radius: 0 0 10px 10px;
+}
+::placeholder{
+    color: white;
+}
+input[type=range]{
+    width: 90%;
+    -webkit-appearance: none;
+    border-radius: 4px;
+    background: #515151;
+    margin: 10px 0;
+    padding: 0 5px;
+    height: 20px;
+}
+input[type='range']::-webkit-slider-thumb {
+    cursor: pointer;
+    -webkit-appearance: none;
+    background:white;
+    border-radius: 50%;
+    height:10px;
+    width:10px;
+}
+button{
+    margin: 10px 30px;
+    width: 30%;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background: #515151;
+    height: 3em;
+    text-transform: uppercase;
+}
+output {
+    font-size: 20px;
+}

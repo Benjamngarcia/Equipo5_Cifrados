@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cifrado César</title>
+        <link href="./css/styles.css" rel="stylesheet" type="text/css">
+        <script src="./js/main.js"></script>
+    </head>
+<body>
+    <h1>Cifrado César Equipo 5</h1>
+    <div class="contenedor-chido">
+        <div class="contenedor">
+            <form action="">
+                <input type="text" id="mensaje" placeholder="Escriba la oración a cifrar"/>
+                <input type="text" id="mensaje2" readonly="readonly"/>
+                <input id="desplazamiento" type="range" value="3" min="1" max="26" oninput="this.nextElementSibling.value = this.value">
+                    <output>3</output>
+                <button type="button" id="cifrar">Cifrar</button>     
+                <button type="button" id="descifrar">Descifrar</button>   
+            </form>
+        </div>
+    </div>
+</body> 
+</html>
