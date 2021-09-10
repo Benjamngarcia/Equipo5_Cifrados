@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/main.js"></script>
+    <title>Cifrado Vigenere</title>
+</head>
+
+<body>
+    <h1>Cifrado Vigenere equipo 5</h1>
+    <form class="formVigenere">
+        <input class="TextV" placeholder="Ingrese la frase" id="InputText" type="text"></input><br />
+        <input class="TextV" placeholder="Ingrese la contraseña"id="PassWord" type="text" /><br />
+        <input type="radio" name="Lang" value="1" checked> Español (A1Z27)<br>
+        <br>
+        <input class="ButtonV" id="Encrypt" onclick="RebuildString(Encriptar(true))" type="button"
+            value="Encriptar" />
+        <input class="ButtonV" id="UnEncrypt" onclick="RebuildString(Encriptar(false))" type="button"
+            value="Desencriptar" />
+        <span class="h1v">Resultado</span>
+        <textarea class="textareaV" id="Result" rows="5"></textarea><br /><br />
+    </form>
+</body>
+
+</html>
