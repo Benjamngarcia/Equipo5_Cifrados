@@ -77,7 +77,7 @@ function Encriptar(ModeEnc, ParaEsp) { //-----------SE CIERRAN VALORES DEL 1 AL 
     var GetPass = document.getElementById("PassWord").value;
     var Codigos = [];
     var TotalChars;
-    if (ParaEsp == 1) TotalChars = 28;
+    if (ParaEsp == 1) TotalChars = 27;
     else TotalChars = 26;
     if (GetPhrase.length < 1 || GetPass.length < 1) {
         alert("La frase/contraseña no puede estar en blanco");
@@ -106,7 +106,7 @@ function Encriptar(ModeEnc, ParaEsp) { //-----------SE CIERRAN VALORES DEL 1 AL 
                 SpaceCount += 1;
             } else {
                 var Value =
-                    PhraseData[i] - PassData[(i - SpaceCount) % PassData.length];
+                    PhraseData[i] - PassData[(i - SpaceCount) % PassData.length - 26];
                 if (Value < 1) {
                     Value += TotalChars;
                 }
@@ -127,9 +127,9 @@ function RebuildString(Codigos) { //------------ForSPanish=LangSelected
             if (Codigos[i] == 15) Salida += String.fromCharCode(209);
             if (Codigos[i] == 0) Salida += String.fromCharCode(90);
             if (Codigos[i] < 15 && Codigos[i] > 0)
-                Salida += String.fromCharCode(Codigos[i] + 64);
-            if (Codigos[i] > 15 && Codigos[i] < 28)
                 Salida += String.fromCharCode(Codigos[i] + 63);
+            if (Codigos[i] > 15 && Codigos[i] < 28)
+                Salida += String.fromCharCode(Codigos[i] + 64);
         } else if (ParaEsp != 1) {
             if (Codigos[i] == 0) {
                 Salida += String.fromCharCode(90);
