@@ -1,16 +1,16 @@
-window.addEventListener("load",inicio,true);
+window.addEventListener("load",inicio,true); //PARA ASEGURAR QUE CARGUE
 
 function inicio(){
     document.getElementById("mensaje").addEventListener("keyup", function(){
-        this.value = this.value.toUpperCase();
+        this.value = this.value.toUpperCase(); //PARA CAMBIAR A LETRAS MAYÚSCULAS TODO LO QUE ESCRIBO
     }, true);
     
-    document.getElementById("cifrar").addEventListener("click",function(){  
+    document.getElementById("cifrar").addEventListener("click",function(){  //CLICK EN EL BOTÓN CIFRAR
         let texto = document.getElementById("mensaje").value;
         let desplazamiento = document.getElementById("desplazamiento").value;               
-        document.getElementById("mensaje2").value = cifrar2(texto, desplazamiento);
+        document.getElementById("mensaje2").value = cifrar(texto, desplazamiento);
     },true);
-    document.getElementById("descifrar").addEventListener("click",function(){  
+    document.getElementById("descifrar").addEventListener("click",function(){  //CLICK EN EL BOTÓN DESCIFRAR 
         let texto = document.getElementById("mensaje").value;
         let desplazamiento = document.getElementById("desplazamiento").value;                               
         document.getElementById("mensaje2").value = descifrar(texto, desplazamiento);
@@ -19,43 +19,18 @@ function inicio(){
 
 function cifrar(texto, desplazamiento) {
     if (!texto) 
-        return ''; // No se recomienda que haya más de un punto de salida de la función
+        return ''; // SI NO PONGO NADA IMPRIME VACIO
     const letras = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
-    //Si aceptamos desplazamientos negativos, necesitamos hacerlo dos veces. Si no, sería:
-    //desplazamiento = desplazamiento % 27;
-    desplazamiento = (desplazamiento % 27 + 27) % 27; 
-    return texto.replace(/[A-Z]/ig, c => letras[(letras.indexOf(c) + desplazamiento) % 26]);
+    desplazamiento = (desplazamiento % 27); 
+    return texto.replace(/[A-Z]/ig, c => letras[(letras.indexOf(c) + desplazamiento)]); //VA A IR RECORRIENDO LA CADENA DE LETRA E IR VIENDO SU POSICIÓN PARA SUMAR EL DESP.
 }
+
 
 function descifrar(texto, desplazamiento) {
     if (!texto) 
-        return ''; // No se recomienda que haya más de un punto de salida de la función
+        return ''; 
     const letras = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
-    //Si aceptamos desplazamientos negativos, necesitamos hacerlo dos veces. Si no, sería:
-    //desplazamiento = desplazamiento % 27;
-    desplazamiento = (desplazamiento % 27 - 27) % 27; 
+    desplazamiento = (desplazamiento % 27); 
     return texto.replace(/[A-Z]/ig, c => letras[(letras.indexOf(c) - desplazamiento) % 27]);
 }
 
-function cifrar2(texto, desplazamiento) {
-    let resultado='';
-    let letras = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
-    //Si aceptamos desplazamientos negativos, necesitamos hacerlo dos veces. Si no, sería:
-    //desplazamiento = desplazamiento % 27;
-    desplazamiento = (desplazamiento % 27 + 27) % 27; 
-    
-    if (texto){
-        for (let i=0; i<texto.length; ++i){
-            //Si la letra está en el array de letras (es un símbolo, un espacio...)
-            if (letras.indexOf(texto[i])!=-1)
-            { 
-                //almacenamos en c la posición de la letra más el desplazamiento y le aplicamos el módulo
-                let posicion=((letras.indexOf(texto[i])+desplazamiento) % 27);
-                resultado+=letras[posicion];
-            }
-            else
-                resultado+=texto[i]; // Números, espacios, símbolos... 
-        }
-    }
-    return resultado;
-}
