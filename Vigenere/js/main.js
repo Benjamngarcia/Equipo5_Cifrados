@@ -110,7 +110,7 @@ function Encriptar(ModeEnc, ParaEsp) { //-----------SE CIERRAN VALORES DEL 1 AL 
                 if (Value < 1) {
                     Value += TotalChars;
                 }
-                Codigos.push(Value % TotalChars);
+                Codigos.push(Value % TotalChars)-1;
             }
         }
     }
