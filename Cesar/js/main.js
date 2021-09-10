@@ -31,6 +31,6 @@ function descifrar(texto, desplazamiento) {
         return ''; 
     const letras = 'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ';
     desplazamiento = (desplazamiento % 27); 
-    return texto.replace(/[A-Z]/ig, c => letras[(letras.indexOf(c) - desplazamiento) % 27]);
+    return texto.replace(/[A-Z]/ig, c => letras[(letras.indexOf(c) - desplazamiento)]);
 }
 
