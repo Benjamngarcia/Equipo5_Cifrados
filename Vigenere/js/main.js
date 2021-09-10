@@ -106,7 +106,7 @@ function Encriptar(ModeEnc, ParaEsp) { //-----------SE CIERRAN VALORES DEL 1 AL 
                 SpaceCount += 1;
             } else {
                 var Value =
-                    PhraseData[i] - PassData[(i - SpaceCount) % PassData.length - 26];
+                    PhraseData[i] - PassData[(i - SpaceCount) % PassData.length];
                 if (Value < 1) {
                     Value += TotalChars;
                 }
