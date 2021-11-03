@@ -1,0 +1,106 @@
+*{
+    background-color: rgb(251, 250, 252);
+    font-family: fantasy;
+}
+
+.rectangulo1{
+    position: absolute;
+    width: 88%;
+    height: 20%;    
+    left: 8%;
+    top: 10%;
+
+    background: rgb(34, 34, 34);
+
+}
+
+
+
+
+.titulo{
+    position: absolute;
+    width: 88%;
+    font-size: 20mm;
+    text-align: center;
+    height: 20%;
+    left: 5%;
+    top: 5%;
+
+    background: rgb(211, 211, 211);
+
+}
+
+.rectangulo2{
+
+    position: absolute;
+    width: 25%;
+    height: 15%;    
+    left: 8%;
+    top: 50%;
+
+    border-radius: 20px;
+    background: rgb(34, 34, 34)
+
+}
+
+.boton16{
+    position: absolute;
+    font-size: 10mm;
+    width: 25%;
+    height: 15%;    
+    left: 5%;
+    top: 45%;
+
+    border-radius: 20px;
+    border: 2px solid rgb(7, 7, 7);
+}
+
+.rectangulo3{
+
+    position: absolute;
+    width: 25%;
+    height: 15%;    
+    left: 40%;
+    top: 50%;
+
+    border-radius: 20px;
+    background: rgb(34, 34, 34)
+
+}
+
+.boton24{
+    position: absolute;
+    font-size: 10mm;
+    width: 25%;
+    height: 15%;    
+    left: 37%;
+    top: 45%;
+
+    border-radius: 20px;
+    border: 2px solid rgb(7, 7, 7);
+}
+
+.rectangulo4{
+
+    position: absolute;
+    width: 25%;
+    height: 15%;    
+    left: 73%;
+    top: 50%;
+
+    border-radius: 20px;
+    background: rgb(34, 34, 34)
+
+}
+
+.boton32{
+    position: absolute;
+    font-size: 10mm;
+    width: 25%;
+    height: 15%;    
+    left: 70%;
+    top: 45%;
+
+    border-radius: 20px;
+    border: 2px solid rgb(7, 7, 7);
+}

@@ -57,7 +57,7 @@ function IsLower(Char4, ParaEsp) {
     }
 }
 
-function IsA1Char(Char5, ParaEsp) {
+function IsA1Char(Char5, ParaEsp) { //FUTURO CAMBIO DE IDIOMA 
     if (ParaEsp == 1) {
         if (Char5 > 27) {
             return false;
@@ -71,7 +71,7 @@ function IsA1Char(Char5, ParaEsp) {
     }
 }
 
-function Encriptar(ModeEnc, ParaEsp) { //-----------SE CIERRAN VALORES DEL 1 AL 27 POR ESO SE USA ForSpanish
+function Encriptar(ModeEnc, ParaEsp) { //-----------SE CIERRAN VALORES DEL 1 AL 27 POR ESO SE USA ParaEsp
     var ParaEsp = LangSelected();
     var GetPhrase = document.getElementById("InputText").value;
     var GetPass = document.getElementById("PassWord").value;
@@ -117,7 +117,7 @@ function Encriptar(ModeEnc, ParaEsp) { //-----------SE CIERRAN VALORES DEL 1 AL 
     document.getElementById("Result").value = Codigos;
     return Codigos;
 }
-function RebuildString(Codigos) { //------------ForSPanish=LangSelected
+function RebuildString(Codigos) { //------------ParaEsp=LangSelected
     var ParaEsp = LangSelected();
     var Salida = "";
     for (var i = 0; i < Codigos.length; i++) {
