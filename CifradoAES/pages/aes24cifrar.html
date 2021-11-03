@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,32 +7,30 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <title>Cifrado AES</title>
 </head>
-
 <body class="bg-dark text-white">
     <div class="pt-5 mt-5">
         <div class="col-md-5 col-sm-12 mx-auto">
             <div class="card bg-dark">
                 <div class="card-body">
                     <form action="">
-                        <h1 class="text-center">DESCIFRAR</h1>
-                        <input type="text" id="Texto" class="form-control mb-2" placeholder="Texto a descifrar" >
+                        <h1 class="text-center">CIFRAR</h1>
+                        <input type="text" id="Texto" class="form-control mb-2" placeholder="Texto a cifrar" >
                         <input type="text" name="password" id="pass" class="form-control" placeholder="Clave (24 caracteres)">
                         <!-- BOTONES -->
                         <div class="d-grid gap-2 d-md-block text-center mt-4">
-                            <input type="button" value="MENÚ" class="btn btn-outline-light p-3 btn-block" onclick="window.location = '/index.html';">
-                            <input type="button" value="DESCIFRAR" id="botonCifrar" class="btn btn-outline-success p-3" onclick="descifrar24()">
-                            <input type="button" value="CIFRAR" class="btn btn-outline-light p-3" onclick="window.location = '../cifrar/aes24cifrar.html';">
+                            <input type="button" value="MENÚ" class="btn btn-outline-light p-3 btn-block" onclick="window.location = '../index.html';">
+                            <input type="button" value="CIFRAR" id="botonCifrar" class="btn btn-outline-success p-3" onclick="cifrar24()">
+                            <input type="button" value="DESCIFRAR" class="btn btn-outline-light p-3" onclick="window.location = './aes24descifrar.html';">
                         </div>
-                        <label id="txtPlano" class="contenido"></label>
+                        <label id="contenido" class="contenido"></label> 
                     </form>
                 </div>
             </div>
         </div>
     </div>
     <!-- SCRIPTS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"> </script>
-    <script src="/js/aesDescifrar.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" > </script>
+    <script src="../js/aesCifrar.js"></script>
+    
 </body>
-
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,12 +16,12 @@
                     <form action="">
                         <h1 class="text-center">CIFRAR</h1>
                         <input type="text" id="Texto" class="form-control mb-2" placeholder="Texto a cifrar" >
-                        <input type="text" name="password" id="pass" class="form-control" placeholder="Clave (24 caracteres)">
+                        <input type="text" name="password" id="pass" class="form-control" placeholder="Clave (16 caracteres)">
                         <!-- BOTONES -->
                         <div class="d-grid gap-2 d-md-block text-center mt-4">
-                            <input type="button" value="MENÚ" class="btn btn-outline-light p-3 btn-block" onclick="window.location = '/index.html';">
-                            <input type="button" value="CIFRAR" id="botonCifrar" class="btn btn-outline-success p-3" onclick="cifrar24()">
-                            <input type="button" value="DESCIFRAR" class="btn btn-outline-light p-3" onclick="window.location = '../descifrar/aes24descifrar.html';">
+                            <input type="button" value="MENÚ" class="btn btn-outline-light p-3 btn-block" onclick="window.location = '../index.html';">
+                            <input type="button" value="CIFRAR" id="botonCifrar" class="btn btn-outline-success p-3" onclick="cifrar()">
+                            <input type="button" value="DESCIFRAR" class="btn btn-outline-light p-3" onclick="window.location = './aes16descifrar.html';">
                         </div>
                         <label id="contenido" class="contenido"></label> 
                     </form>
@@ -29,8 +30,8 @@
         </div>
     </div>
     <!-- SCRIPTS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" > </script>
-    <script src="/js/aesCifrar.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"> </script>
+    <script src="../js/aesCifrar.js"></script>
 </body>
+
 </html>
