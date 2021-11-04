@@ -4,27 +4,28 @@ function cifrar(filename, text) {
     if (clave.length != 16) {
         alert("Deben ser 16 caracteres");
         return;
-    }
-    else {
+    } else {
     }
     if (mensaje == "") {
-        alert("Escribe un mensaje");
+        alert("Tienes que escribir un mensaje");
+        location.href = "../pages/aes16cifrar.html"
+    } else{
+        const cifrado = CryptoJS.AES.encrypt(mensaje, clave);
+        document.getElementById("contenido").innerHTML = cifrado;
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(cifrado));
+        element.setAttribute('download', filename);
+        element.style.display = 'none';
+        document.body.appendChild(element);
+        element.click();
+        document.body.removeChild(element);
+        document.getElementById("botonCifrar").addEventListener("click", function () {
+            // Generate download of hello.txt file with some content
+            var text = document.getElementById("contenido").value;
+            var filename = "CifradoAES.txt";
+            cifrar(filename, text);
+        }, false);
     }
-    const cifrado = CryptoJS.AES.encrypt(mensaje, clave);
-    document.getElementById("contenido").innerHTML = cifrado;
-    var element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(cifrado));
-    element.setAttribute('download', filename);
-    element.style.display = 'none';
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
-    document.getElementById("botonCifrar").addEventListener("click", function () {
-        // Generate download of hello.txt file with some content
-        var text = document.getElementById("contenido").value;
-        var filename = "CifradoAES.txt";
-        cifrar(filename, text);
-    }, false);
 }
 
 
@@ -34,28 +35,27 @@ function cifrar24(filename, text) {
     if (clave.length != 24) {
         alert("Deben ser 24 caracteres");
         return;
-    }
-    else {
+    }else {
     }
     if (mensaje == "") {
-        alert("Escribe un mensaje");
+        alert("Tienes que escribir un mensaje");
+    } else{
+        var cifrado = CryptoJS.AES.encrypt(mensaje, clave);
+        document.getElementById("contenido").innerHTML = cifrado;
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(cifrado));
+        element.setAttribute('download', filename);
+        element.style.display = 'none';
+        document.body.appendChild(element);
+        element.click();
+        document.body.removeChild(element);
+        document.getElementById("botonCifrar").addEventListener("click", function () {
+            // Generate download of hello.txt file with some content
+            var text = document.getElementById("contenido").value;
+            var filename = "CifradoAES.txt";
+            cifrar24(filename, text);
+        }, false);
     }
-    var cifrado = CryptoJS.AES.encrypt(mensaje, clave);
-    document.getElementById("contenido").innerHTML = cifrado;
-    var element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(cifrado));
-    element.setAttribute('download', filename);
-    element.style.display = 'none';
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
-    document.getElementById("botonCifrar").addEventListener("click", function () {
-        // Generate download of hello.txt file with some content
-        var text = document.getElementById("contenido").value;
-        var filename = "CifradoAES.txt";
-        cifrar24(filename, text);
-    }, false);
-
 }
 
 
@@ -69,21 +69,22 @@ function cifrar32(filename, text) {
     else {
     }
     if (mensaje == "") {
-        alert("Escribe un mensaje");
-    }
-    var cifrado = CryptoJS.AES.encrypt(mensaje, clave);
-    document.getElementById("contenido").innerHTML = cifrado;
-    var element = document.createElement('a');
-    element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(cifrado));
-    element.setAttribute('download', filename);
-    element.style.display = 'none';
-    document.body.appendChild(element);
-    element.click();
-    document.body.removeChild(element);
-    document.getElementById("botonCifrar").addEventListener("click", function () {
-        // Generate download of hello.txt file with some content
-        var text = document.getElementById("contenido").value;
-        var filename = "CifradoAES.txt";
-        cifrar32(filename, text);
-    }, false);
+        alert("Tienes que escribir un mensaje");
+    } else{
+        var cifrado = CryptoJS.AES.encrypt(mensaje, clave);
+        document.getElementById("contenido").innerHTML = cifrado;
+        var element = document.createElement('a');
+        element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(cifrado));
+        element.setAttribute('download', filename);
+        element.style.display = 'none';
+        document.body.appendChild(element);
+        element.click();
+        document.body.removeChild(element);
+        document.getElementById("botonCifrar").addEventListener("click", function () {
+            // Generate download of hello.txt file with some content
+            var text = document.getElementById("contenido").value;
+            var filename = "CifradoAES.txt";
+            cifrar32(filename, text);
+        }, false);
+        }
 }
